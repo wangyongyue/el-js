@@ -1,0 +1,15 @@
+{
+  "name": "el-js",
+  "version": "1.0.0",
+  "description": "el",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5"
+  }
+}
