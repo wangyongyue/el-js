@@ -11,5 +11,17 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^10.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyongyue/el-js.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/wangyongyue/el-js/issues"
+  },
+  "homepage": "https://github.com/wangyongyue/el-js#readme",
+  "dependencies": {
+    "realm": "^2.1.0"
   }
 }

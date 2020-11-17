@@ -1,26 +1,160 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>dy-js</title>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 
 <body>
-    <div id="div1" style="width: 200px;height: 100px;background: red">
-    	<p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-    </div>
+<div class="top" id="topMenu"></div>
+<div class="count">
 
-
-
-    <script>
-    
-
-       
-
-    </script>
-
+     <div class="l1">
+         <div class="file" id="file"></div>
+         <div class="custom" id="custom"></div>
+     </div>
+     <div class="l2">
+         <div class="mainView" id="mainView"></div>
+         <div class="log" id="log"></div>
+     </div>
+     <div class="l3">
+         <div class="att" id="att"></div>
+         <div class="code" id="code"></div>
+     </div>
+</div>
 </body>
+<style>
+    *{margin:0px;padding:0px}
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background-color: #3B3E40;
+    }
+
+    ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    border-radius: 10px;
+    background-color: rgba(98, 100, 101, .5);
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+        background-color: rgba(98, 100, 101, .5);
+    }
+
+
+    .top {
+        height: 60px;
+        margin: 0;
+        border-bottom: solid 1px black;
+
+    }
+    .count {
+
+    }
+    .l1 {
+        float: left;
+        width:15%;
+        height: 800px;
+        background: #3B3E40;
+
+
+    }
+    .l2 {
+        float: left;
+        width:50%;
+        height: 800px;
+        background: #3B3E40;
+
+    }
+    .l3 {
+        float: left;
+        width:34.8%;
+        height: 800px;
+        background: #3B3E40;
+
+    }
+    .file {
+        height: 50%;
+        overflow: auto;
+        border-right: solid 1px black;
+        border-bottom: solid 1px black;
+
+    }
+    .custom {
+        height: 50%;
+        overflow: auto;
+        border-right: solid 1px black;
+        border-bottom: solid 1px black;
+    }
+    .mainView {
+        height: 70%;
+        overflow: auto;
+        border-bottom: solid 1px black;
+    }
+    .log {
+        height: 30%;
+        overflow: auto;
+
+    }
+     .att {
+        width: 50%;
+         float: left;
+         overflow: auto;
+         height: 100%;
+         border-left: solid 1px black;
+    }
+    .code {
+        width: 49.5%;
+        float: left;
+        overflow: auto;
+        height: 100%;
+        border-left: solid 1px black;
+    }
+
+
+
+</style>
+<script>
+
+
+
+    var TopMenu = require('./component/TopMenu')
+    var File = require('./component/File')
+    var MainView = require('./component/MainView')
+    var Att = require('./component/Att')
+    var Code = require('./component/Code')
+    var Custom = require('./component/Custom')
+    var Log = require('./component/Log')
+
+
+    var topMenu = new TopMenu()
+    topMenu.add(document.getElementById('topMenu'))
+
+    var file = new File()
+    file.add(document.getElementById('file'))
+
+    var mainView = new MainView()
+    mainView.add(document.getElementById('mainView'))
+
+    var att = new Att()
+    att.add(document.getElementById('att'))
+
+    var code = new Code()
+    code.add(document.getElementById('code'))
+
+    var custom = new Custom()
+    custom.add(document.getElementById('custom'))
+
+    var log = new Log()
+    log.add(document.getElementById('log'))
+
+
+
+
+</script>
+
 </html>
